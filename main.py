@@ -1,3 +1,4 @@
+
 import random
 import csv
 from grades import letter_grade
@@ -119,7 +120,8 @@ def delete_student():
               students.remove(student)
               print("Student deleted!")
               save_students()
-              return
+          else:
+              print("student not found")
 
 def main():
     load_students()
@@ -155,6 +157,7 @@ def main():
 
         elif choice == "6":
             save_students()
+            break
 
         elif choice == "7":
             highest_score()
@@ -167,7 +170,7 @@ def main():
 
         elif choice == "10":
            delete_student()
-           break
+           
 
         else:
             print("Invalid choice")
